@@ -1,3 +1,103 @@
 ****Q1. List out different OOPS principles and explain ? (10 marks)*******
 
+There are 4 major principles of OOPS
+
+1. Encapsulation
+        Encapsulation:
+It is of 3 types:
+protected
+private
+protected:
+The variables are wrapped in the class and that cannot be accessed outside class but it can be accessed inside the class.Its can be used by using underscore “_”.
+
+Ex- class Node:
+        def _init_(self):
+                self._a = 2
+ 
+class Occured(Node):
+            def _init_(self):
+print(" protected member of node class: ")
+print(self._a)
+obj1 = Occured()
+obj2 = Node()
+
+    
+private:
+    The variables are wrapped in the class same as protected and it cannot be assed outside the class. It can be used by using double underscore “__”.
+Ex:
+ class Node:
+        def _init_(self):
+                self._a = 2
+class Derived(Base):
+    def _init_(self):
+         
+        Base._init_(self)
+        print(" private member of base class: ")
+        print(self.__c)
+obj1 = Node()
+print(obj1.a)
+         
+ 2. Abstraction
+       Abstraction occurs when a programmer hides any irrelevant data about an object or an instantiated class to reduce complexity and help users interact with a program more efficiently. The term abstraction vs encapsulation can be used to describe the process of hiding some of the information contained in an object or class, but it may also refer to the object itself. An abstraction is any named entity that contains a selection of data and behaviors specific to a particular usage of the originating entity.
+       
+3 Inheritance
+       Inheritance is one of the key concepts in the Python Object-Oriented Programming language that enables you to organize classes in a hierarchical form. Just like a child inherits his parents’ characteristics and adds certain new characteristics of his own, a programmer can write a new class that can inherit the accessible fields and methods of the existing class and may also add new fields and methods. The inclusion of members of the existing class in a new class so that they are accessible in the new class is known as class inheritance. 
+       
+4. Polymorphism
+        So, polymorphism implies the ability to take many forms. In programming terms, it means the ability by which a single variable of a given type can be used to reference objects of different types and automatically call the method specific to the type of object the variable references.
+     
+
+   
+************Q2. List out Layers of TCP/IP Model and explain ? (10 marks) ***************
+
+physical layer- It is basically wire which is used for making communication network.
+
+Data link layer- it is the layer where the data is transferred in packets it contains data and header and others more. The datas are broken down and sent through packets with numbers from source and get assembled in the destination.
+network layer - its work basically is to find the address to send the packets to the destination address using the ip address.
+
+transport layer - its work is to check the errors of the data packets. It also takes care of the size, sequence and then transfer the data.
+
+session layer- it connects or terminates or authenticates or reconnects the destination computers to session layer and confirm the connection between themselves. 
+
+presentation layer-it makes the data presentable so that it can be read or accepted by the application.
+
+application layer- this is the application where the data can be visually be seen.
+
+
+****************Q5. Explain LRU cache and its implementation by taking some examples and explaining all
+steps. (5 marks)******************
+A Least Recently Used (LRU) Cache organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
+
+Picture a clothes rack, where clothes are always hung up on one side. To find the least-recently used item, look at the item on the other end of the rack.
+
+An LRU cache is built by combining two data structures: a doubly linked list and a hash map.
+
+*******************Q6. Explain virtual memory. (5 marks)**********************
+Virtual memory is a feature of an operating system that enables a computer to be able to compensate shortages of physical memory by transferring pages of data from random access memory to disk storage.
+
+This process is done temporarily and is designed to work as a combination of RAM and space on the hard disk.
+
+This means that when RAM runs low, virtual memory can move data from it to a space called a paging file. This process allows for RAM to be freed up so that a computer can complete the task.
+
+Occasionally a user might be shown a message that says the virtual memory is running low, this means that either more RAM needs to be added, or the size of the paging file needs to be increased.
+
+
+
+*****************Q7. Explain Deadlock and its characteristics. (5 marks) ******************
+In a deadlock, processes never finish executing, and system resources are tied up, preventing other jobs from starting.
+	Characteristics:-
+	i)Mutual Exclusion-A resource can only be shared in mutually exclusive manner. It implies, if two process cannot use the same resource at the same time.
+	
+	ii)Hold and Wait-A process waits for some resources while holding another resource at the same time.
+	
+	iii)No preemption-The process which once scheduled will be executed till the completion. No other process can be scheduled by the scheduler meanwhile.
+	
+	iv)Circular Wait-All the processes must be waiting for the resources in a cyclic manner so that the last process is waiting for the resource which is being held by the first process.
+	
+*****************Q8. Explain NAT and ARP protocol ? ( 5 marks)*******************
+Network Address Translation (NAT):
+NAT, in which the Private IP address or local address are translated into the public IP address. NAT is used to slow down the rate of depletion of available IP address by translates the local IP or Private IP address into global or public ip address. NAT can be a one-to-one relation or many-to-one relation.
+
+Port Address Translation (PAT):
+In PAT, Private IP addresses are translated into the public IP address via Port numbers. PAT also uses IPv4 address but with port number. It have two types:
 
